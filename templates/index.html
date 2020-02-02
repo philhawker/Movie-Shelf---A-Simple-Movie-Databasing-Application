@@ -1,0 +1,30 @@
+<doctype html>
+<head>
+    <title>MovieShelf</title>
+</head>
+
+<h1>Movie Shelf</h1>
+<h2>A Simple Movie Databasing Application</h2>
+
+<p><p>
+<a href="{{ url_for('.new_movie') }}"> Add a movie to your Shelf </a>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
+    {{ render_field(form.select) }}
+    <p>
+    {{ render_field(form.search) }}
+  </dl>
+  <p><input type=submit value=Search>
+</form>
