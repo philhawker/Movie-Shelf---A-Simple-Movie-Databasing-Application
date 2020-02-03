@@ -12,14 +12,16 @@ class MovieSearchForm(Form):
 
 class MovieForm(Form):
     genre_types = [('Action', 'Action'),
+                   ('Action/Comedy', 'Action/Comedy'),
                    ('Comedy', 'Comedy'),
+                   ('Romance', 'Romance'),
+                   ('Romance/Comedy', 'Romance/Comedy'),
                    ('Horror', 'Horror'),
                    ('Sci-Fi', 'Sci-Fi'),
                    ('Drama', 'Drama'),
                    ('Suspense', 'Suspense'),
                    ('Documentary', 'Documentary'),
                    ('Kids and Family', 'Kids and Family'),
-                   ('Romance', 'Romance')
                    ]
     title = StringField('Title')
     actor = StringField('Starring Actors')
