@@ -34,7 +34,11 @@ def search_results(search):
             results = qry.all()
         elif search.data['select'] == 'Rating':
             qry = db_session.query(Movie).filter(
-                Movie.publisher.contains(search_string))
+                Movie.rating.contains(search_string))
+            results = qry.all()
+        elif search.data['select'] == 'Genre':
+            qry = db_session.query(Movie).filter(
+                Movie.genre_type.contains(search_string))
             results = qry.all()
         else:
             qry = db_session.query(Movie)
