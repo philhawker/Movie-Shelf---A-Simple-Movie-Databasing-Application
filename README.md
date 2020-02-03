@@ -21,7 +21,7 @@ $ pipenv install WTForms
 In the Project Directory, start a python REPL:
 ```
 $ >>> from app import db
-
+```
 
 ### CREATE NEW DATABASE FILE
 
