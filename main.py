@@ -40,6 +40,10 @@ def search_results(search):
             qry = db_session.query(Movie).filter(
                 Movie.genre_type.contains(search_string))
             results = qry.all()
+        elif search.data['select'] == 'Release Year':
+            qry = db_session.query(Movie).filter(
+                Movie.release_date.contains(search_string))
+            results = qry.all()
         else:
             qry = db_session.query(Movie)
             results = qry.all()
