@@ -16,7 +16,14 @@ $ pipenv install Flask-Table
 $ pipenv install WTForms
 ```
 
-### CREATING NEW DATABASE
+### USING CURRENT DATABASE FILE
+
+In the Project Directory, start a python REPL:
+```
+$ >>> from app import db
+
+
+### CREATE NEW DATABASE FILE
 
 In the Project Directory, start a python REPL:
 ```
